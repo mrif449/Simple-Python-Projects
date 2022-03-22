@@ -7,4 +7,5 @@ If you don't have much time I will recomanned to run at least 3 samples, 5 is id
 It will give your every sample runtime and score. And finally it will output total time taken to run this benchmark, your cummulative benchmark score and how much proformace drops while running codes.
 
 ### Result Sample:
-![alt text](http://drive.google.com/file/d/15kikS-TRGzHRl0MCWBiLkXxVfcXzbhmT/view?usp=sharing/1D Coding Benchmark/Benchmark.png)
+
+![Benchmark](https://user-images.githubusercontent.com/85452696/159559260-32b177ce-2748-4b35-826a-bc133cfe6f37.png)
