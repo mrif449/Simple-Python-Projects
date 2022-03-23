@@ -7,6 +7,10 @@ print("⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧�
 print("⛧Welcome to 1D Coding Benchmark⛧")
 print("⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧")
 sample_run = int(input("Enter sample run count(1-5): "))
+details = False
+command1 = input("Like to see detailed report? (y/n): ")
+if command1.lower() == "y":
+    details = True
 for x in range(sample_run):
     start = time.time()
     a = 0
@@ -29,10 +33,11 @@ minute = time // 60
 time %= 60
 seconds = time
 final = "{:.0f}".format(sum(benchmarks)/sample_run)
-print("-----------------------------------------")
-for i in range(len(benchmarks)):
-    print(f"Run-{i+1}:\n¯¯¯¯¯\nTime taken: {'{:.2f}'.format(times[i])}s\nResult: {'{:.0f}'.format(benchmarks[i])}\n")
-print("-----------------------------------------")
+if details == True:
+    print("-----------------------------------------")
+    for i in range(len(benchmarks)):
+        print(f"Run-{i+1}:\n¯¯¯¯¯\nTime taken: {'{:.2f}'.format(times[i])}s\nResult: {'{:.0f}'.format(benchmarks[i])}\n")
+    print("-----------------------------------------")
 highest = benchmarks[0]
 lowest = benchmarks[0]
 for z in benchmarks:
