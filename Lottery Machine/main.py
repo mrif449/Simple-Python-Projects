@@ -1,8 +1,8 @@
 import random
 RUN_LIMIT = 20000
-MAX_AMOUNT = 10000
-MAX_BET = 500
-MIN_BET = 10
+MAX_AMOUNT = 50000
+MAX_BET = 5000
+MIN_BET = 100
 MAX_LINES = 3
 checks = [0,0,0]
 array = ["A","B","C"]
@@ -130,6 +130,3 @@ def main():
         checks[2] = 0
 main()
 
-
-#giving money although betting not okay
-#betting while have no money
