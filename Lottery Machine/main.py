@@ -1,3 +1,5 @@
+from audioop import mul
+from enum import unique
 import random
 RUN_LIMIT = 20000
 MAX_AMOUNT = 50000
@@ -10,11 +12,14 @@ account = 0
 bet_values = []
 for x in range(len(array)):
     bet_values.append(random.randint(1,4))
-
+multiplier = 1
+print("⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧")
+print("⛧       Lottery Machine        ⛧")
+print("⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧")
 def deposit():
     global account
     while True:
-        amount = input("Enter an Amount to Deposit: ৳")
+        amount = input("\nEnter an Amount to Deposit: ৳")
         if amount.isdigit():
             amount = int(amount)
             if amount > 0:
@@ -27,6 +32,7 @@ def deposit():
 
 def runner(balance):
     global account
+    global multiplier
     lines = get_lines()
     while True:
         bet = get_bet()
@@ -52,9 +58,9 @@ def runner(balance):
             print(f"Sorry you did not won anything. Your Balance ৳{account}")
     else:
             for x in range(counter):
-                account = account + bet*(random.randint(1,4))
+                account = account + bet*lines
             print(f"You have won {counter} lines. You won ৳{account-temp_bal} \nYour balace is ৳{account}")
-    print(checks)
+    multiplier = 1 
     return lines,bet
 
 def get_bet():
@@ -86,6 +92,7 @@ def get_lines():
 def line_run(number):
     global checks
     global array
+    global multiplier
     unique = []
     results = []
     for x in range(RUN_LIMIT):
@@ -115,12 +122,12 @@ def line_run(number):
         checks[number] = 1
     for x in results:
         results.pop()
-
+    
 balance = deposit()
 def main():
     while True:
         answer = input("Press enter to play (x to quit).")
-        print(account)
+        print(f"Current Balance: ৳{account}")
         if answer == "x" or account<=0 or account<MIN_BET:
             print(f"Goodbye you have ৳{account}")
             break
