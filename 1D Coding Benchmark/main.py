@@ -3,9 +3,9 @@ import time
 benchmarks = []
 times = []
 starts = time.time()
-print("⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧")
-print("⛧Welcome to 1D Coding Benchmark⛧")
-print("⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧⛧")
+print("********************************")
+print("*Welcome to 1D Coding Benchmark*")
+print("********************************")
 sample_run = int(input("Enter sample run count(1-5): "))
 details = False
 command1 = input("Like to see detailed report? (y/n): ")
