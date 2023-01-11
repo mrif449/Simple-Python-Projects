@@ -17,8 +17,9 @@ for x in range(sample_run):
     sample = 1000000
     for y in range(sample):
         a += 1
-        print(" => ",end="\r")
-        print(f"    Run:{x+1}> Completed: {'{:.2f}'.format(a/10000)}%",end="\r")
+        print(f" => Run:{x+1}> Completed: {'{:.2f}'.format(a/10000)}",end="\r")
+        #print(f"    ",end="\r")
+        print("                           %",end="\r")
     end = time.time()
     result = end - start
     times.append(result)
